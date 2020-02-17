@@ -1,4 +1,5 @@
 import UIKit
+import CleanReversi
 
 private let lineWidth: CGFloat = 2
 

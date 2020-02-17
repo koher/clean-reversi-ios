@@ -1,4 +1,5 @@
 import UIKit
+import CleanReversi
 
 class DiskView: UIView {
     var disk: Disk = .dark {

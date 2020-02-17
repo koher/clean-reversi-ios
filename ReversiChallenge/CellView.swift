@@ -1,4 +1,5 @@
 import UIKit
+import CleanReversi
 
 private let animationDuration: TimeInterval = 0.25
 
