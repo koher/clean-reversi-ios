@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,12 @@
 		D642BDC023A9FE4700396732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D642BDBE23A9FE4700396732 /* LaunchScreen.storyboard */; };
 		D642BDCB23A9FE4700396732 /* ReversiChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642BDCA23A9FE4700396732 /* ReversiChallengeTests.swift */; };
 		D642BDD623AA0B3900396732 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642BDD523AA0B3900396732 /* CellView.swift */; };
-		D642BDD823AA0B5700396732 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642BDD723AA0B5700396732 /* Disk.swift */; };
 		D642BDDC23AA137C00396732 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642BDDB23AA137C00396732 /* BoardView.swift */; };
+		D6BEB49323FA71D900BAD211 /* CleanReversiApp in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB49223FA71D900BAD211 /* CleanReversiApp */; };
+		D6BEB49523FA71D900BAD211 /* CleanReversiAI in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB49423FA71D900BAD211 /* CleanReversiAI */; };
+		D6BEB49723FA71D900BAD211 /* CleanReversiGateway in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB49623FA71D900BAD211 /* CleanReversiGateway */; };
+		D6BEB49923FA71D900BAD211 /* CleanReversi in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB49823FA71D900BAD211 /* CleanReversi */; };
+		D6BEB49B23FA71D900BAD211 /* CleanReversiAsync in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB49A23FA71D900BAD211 /* CleanReversiAsync */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +48,6 @@
 		D642BDCA23A9FE4700396732 /* ReversiChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiChallengeTests.swift; sourceTree = "<group>"; };
 		D642BDCC23A9FE4700396732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D642BDD523AA0B3900396732 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		D642BDD723AA0B5700396732 /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 		D642BDDB23AA137C00396732 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +56,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BEB49323FA71D900BAD211 /* CleanReversiApp in Frameworks */,
+				D6BEB49723FA71D900BAD211 /* CleanReversiGateway in Frameworks */,
+				D6BEB49B23FA71D900BAD211 /* CleanReversiAsync in Frameworks */,
+				D6BEB49523FA71D900BAD211 /* CleanReversiAI in Frameworks */,
+				D6BEB49923FA71D900BAD211 /* CleanReversi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,14 +82,6 @@
 				D636B39E23D35043007F370F /* DiskView.swift */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		D636B3A423D432D3007F370F /* DataTypes */ = {
-			isa = PBXGroup;
-			children = (
-				D642BDD723AA0B5700396732 /* Disk.swift */,
-			);
-			name = DataTypes;
 			sourceTree = "<group>";
 		};
 		D642BDA723A9FE4500396732 = {
@@ -113,7 +113,6 @@
 				D642BDBE23A9FE4700396732 /* LaunchScreen.storyboard */,
 				D642BDC123A9FE4700396732 /* Info.plist */,
 				D636B3A123D43203007F370F /* Views */,
-				D636B3A423D432D3007F370F /* DataTypes */,
 			);
 			path = ReversiChallenge;
 			sourceTree = "<group>";
@@ -143,6 +142,13 @@
 			dependencies = (
 			);
 			name = ReversiChallenge;
+			packageProductDependencies = (
+				D6BEB49223FA71D900BAD211 /* CleanReversiApp */,
+				D6BEB49423FA71D900BAD211 /* CleanReversiAI */,
+				D6BEB49623FA71D900BAD211 /* CleanReversiGateway */,
+				D6BEB49823FA71D900BAD211 /* CleanReversi */,
+				D6BEB49A23FA71D900BAD211 /* CleanReversiAsync */,
+			);
 			productName = ReversiChallenge;
 			productReference = D642BDB023A9FE4500396732 /* ReversiChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +199,9 @@
 				Base,
 			);
 			mainGroup = D642BDA723A9FE4500396732;
+			packageReferences = (
+				D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */,
+			);
 			productRefGroup = D642BDB123A9FE4500396732 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,7 +239,6 @@
 			files = (
 				D636B39F23D35043007F370F /* DiskView.swift in Sources */,
 				D642BDD623AA0B3900396732 /* CellView.swift in Sources */,
-				D642BDD823AA0B5700396732 /* Disk.swift in Sources */,
 				D642BDB823A9FE4500396732 /* ViewController.swift in Sources */,
 				D642BDDC23AA137C00396732 /* BoardView.swift in Sources */,
 				D642BDB423A9FE4500396732 /* AppDelegate.swift in Sources */,
@@ -493,6 +501,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koher/clean-reversi-swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = "0.1.0-alpha";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6BEB49223FA71D900BAD211 /* CleanReversiApp */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */;
+			productName = CleanReversiApp;
+		};
+		D6BEB49423FA71D900BAD211 /* CleanReversiAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */;
+			productName = CleanReversiAI;
+		};
+		D6BEB49623FA71D900BAD211 /* CleanReversiGateway */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */;
+			productName = CleanReversiGateway;
+		};
+		D6BEB49823FA71D900BAD211 /* CleanReversi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */;
+			productName = CleanReversi;
+		};
+		D6BEB49A23FA71D900BAD211 /* CleanReversiAsync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB49123FA71D900BAD211 /* XCRemoteSwiftPackageReference "clean-reversi-swift" */;
+			productName = CleanReversiAsync;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D642BDA823A9FE4500396732 /* Project object */;
 }
