@@ -1,5 +1,4 @@
 import UIKit
-import Foundation
 import CleanReversi
 import CleanReversiAsync
 import CleanReversiAI
