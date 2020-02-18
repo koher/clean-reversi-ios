@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReversiChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,6 +53,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zq8-hK-TyQ" secondAttribute="height" multiplier="1:1" id="2W1-wd-IFi"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="q3T-4M-JrC"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-qG-dMQ" userLabel="Dark View">
                                 <rect key="frame" x="20" y="210" width="270" height="31"/>

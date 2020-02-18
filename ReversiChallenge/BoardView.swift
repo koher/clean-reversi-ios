@@ -13,7 +13,7 @@ public class BoardView: UIView {
     public let xRange: Range<Int>
     public let yRange: Range<Int>
     
-    public weak var delegate: BoardViewDelegate?
+    @IBOutlet public weak var delegate: BoardViewDelegate?
     
     override public init(frame: CGRect) {
         xRange = 0 ..< width
@@ -128,7 +128,7 @@ public class BoardView: UIView {
     }
 }
 
-public protocol BoardViewDelegate: AnyObject {
+@objc public protocol BoardViewDelegate: AnyObject {
     func boardView(_ boardView: BoardView, didSelectCellAtX x: Int, y: Int)
 }
 

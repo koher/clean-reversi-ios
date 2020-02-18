@@ -47,6 +47,12 @@ extension ViewController {
     }
 }
 
+extension ViewController: BoardViewDelegate {
+    func boardView(_ boardView: BoardView, didSelectCellAtX x: Int, y: Int) {
+        try? gameController.placeDiskAt(x: x, y: y)
+    }
+}
+
 // MARK: Delegates
 
 extension ViewController: GameControllerDelegate, GameControllerBoardAnimationDelegate {
