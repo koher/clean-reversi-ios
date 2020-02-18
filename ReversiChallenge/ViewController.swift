@@ -112,8 +112,8 @@ extension ViewController: GameControllerDelegate, GameControllerBoardAnimationDe
 }
 
 extension ViewController: GameControllerStrategyDelegate {
-    func move(for board: Board, of side: Disk, completion: @escaping (Int, Int) -> Void) -> Canceller {
-        CleanReversiAI.move(for: board, of: side) { x, y in completion(x, y) }
+    func move(for board: Board, of side: Disk, handler: @escaping (Int, Int) -> Void) -> Canceller {
+        CleanReversiAI.move(for: board, of: side) { x, y in handler(x, y) }
     }
 }
 
